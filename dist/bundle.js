@@ -1,0 +1,1 @@
+(()=>{"use strict";console.log("I'm the entry point"),console.log("Have a good day!"),console.log("Have a good 2 day!")})();
