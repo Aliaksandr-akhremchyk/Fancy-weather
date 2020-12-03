@@ -37,7 +37,8 @@ REFRESH_btn.addEventListener("click", () => {
   VECTOR_REFRESH_btn.style.transform = `rotate(${rotare}deg)`;
   rotare += 180;
   const img = new Image();
-  img.src = "../src/assets/imeges/bg2.png";
+  img.src =
+    "https://img1.goodfon.ru/original/1920x1080/2/27/more-gorizont-nebo-oblaka.jpg";
   img.onload = () => {
     document.body.style.backgroundImage = `url(${img.src})`;
   };
