@@ -15,7 +15,7 @@ module.exports = {
         use: [miniCss.loader, "css-loader", "sass-loader"],
       },
       {
-        test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+        test: /\.(?:ico|gif|png|jpg|jpeg|svg)$/i,
         type: "asset/resource",
       },
     ],

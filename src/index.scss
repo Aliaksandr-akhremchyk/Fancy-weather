@@ -1,2 +1,14 @@
+@import "./styles/variables.scss";
 @import "./styles/backgroundImg.scss";
-@import "./styles/stule2.scss";
+@import "./styles/header.scss";
+@import "./styles/sity-time.scss";
+@import "./styles/weather.scss";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  color: white;
+  transition: 1s all;
+}

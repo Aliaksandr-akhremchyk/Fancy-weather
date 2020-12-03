@@ -11,9 +11,43 @@
     />
     <link rel="stylesheet" href="./dist/style.css" />
   </head>
-  <body>
-    <div class="background"></div>
-    <div></div>
+  <body class="background">
+    <div class="overlay"></div>
+    <div class="header">
+      <div class="header__container">
+        <div class="header__refreshBtn">
+          <div class="inVector"></div>
+        </div>
+        <div class="leng-en btn-left btn-small">EN</div>
+        <div class="leng-ru btn-right btn-small passive">RU</div>
+        <div class="deg-f btn-left btn-small">°F</div>
+        <div class="deg-c btn-right btn-small passive">°С</div>
+      </div>
+      <div class="push"></div>
+      <div class="header__container">
+        <div class="search-input">Search city or ZIP</div>
+        <div class="search-btn">Search</div>
+      </div>
+    </div>
+    <div class="sity">Minsk, Belarus</div>
+    <div class="day-time">
+      <span class="day"></span>
+      <span class="time"></span>
+    </div>
+    <div class="weather">
+      <div class="weather__today">10</div>
+      <div class="weather__three-days">
+        <div class="weather__three-days_day weather__three-days_day-first">
+          7
+        </div>
+        <div class="weather__three-days_day weather__three-days_day-second">
+          8
+        </div>
+        <div class="weather__three-days_day weather__three-days_day-sthird">
+          9
+        </div>
+      </div>
+    </div>
 
     <script src="./dist/bundle.js"></script>
   </body>
