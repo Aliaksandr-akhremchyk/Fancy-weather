@@ -1,6 +1,6 @@
 import { currentLeng } from "./time";
 import { allData } from "./insertData";
-import { SEARCH_INPUT, MESSAGE } from "./search";
+import { SEARCH_INPUT } from "./search";
 
 const T_SEARCH = document.querySelector(".t-search");
 const T_TEMP_FEELS = document.querySelector(".t-tempFeels");
@@ -11,7 +11,8 @@ const T_LATITUDE = document.querySelector(".t-latitude");
 const T_LONGIRUDE = document.querySelector(".t-longitude");
 const WEATHER_CODE = document.querySelector(".weatherCode");
 const CITY = document.querySelector(".city");
-// export const START_OVERLAY = document.querySelector(".start-overlay");
+export const START_OVERLAY = document.querySelector(".start-overlay");
+export const MESSAGE = document.querySelector(".message");
 
 let titles = [
   T_SEARCH,
@@ -22,7 +23,7 @@ let titles = [
   T_LATITUDE,
   T_LONGIRUDE,
   MESSAGE,
-  // START_OVERLAY,
+  START_OVERLAY,
 ];
 
 let translation = [
@@ -33,8 +34,8 @@ let translation = [
   ["Влажность: ", "Humidity: "],
   ["Широта: ", "Latitude: "],
   ["Долгота: ", "Longitude: "],
-  ["Что-то пошло не так...", "Something went wrong..."],
-  // ["Загрузка...", "Loading..."],
+  ["Что-то пошл/о не так...", "Something went wrong..."],
+  ["Загрузка...", "Loading..."],
 ];
 
 let codeWeather = [

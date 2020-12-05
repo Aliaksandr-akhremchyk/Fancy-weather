@@ -17,10 +17,20 @@
     />
   </head>
   <body class="background">
-    <!-- <div class="start-overlay"> <p>Loading...</p> </div> -->
+    <div class="start-overlay"> 
+      <p>Loading...</p> 
+      <div class="start-message"> 
+        <p>Something went wrong...
+        Probably we didn't get your coordinates. Would you like to continue?</p>
+        <div class="start-confirm">Ok!</div> 
+      </div>
+    
+    </div>
+    
     <div class="background__img"></div>
     <div class="overlay"></div>
     <div class="header">
+      <div class="message"> Что-то пошло не так... </div>
       <div class="header__wrapper">
         <div class="header__container">
           <div class="header__refreshBtn">
@@ -91,7 +101,7 @@
         </div>
       </div>
     </div>
-    <div class="message move"> Что-то пошло не так... </div>
+    
     <script src="./dist/bundle.js"></script>
   </body>
 </html>

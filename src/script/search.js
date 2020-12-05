@@ -2,8 +2,8 @@ import { map, currentLocation } from "./map";
 import { getWeather } from "./weather";
 import { getСoordinates } from "./coord";
 import { insertData } from "./insertData";
+import { MESSAGE } from "./leng";
 
-export const MESSAGE = document.querySelector(".message");
 const SEARCH_btn = document.querySelector(".search-btn");
 export const SEARCH_INPUT = document.querySelector(".search-input");
 
@@ -24,18 +24,23 @@ function mainCearch() {
       console.log("не получилось ваще");
       moveMessage();
       setTimeout(() => {
-        MESSAGE.classList.add("move");
+        MESSAGE.classList.remove("move");
       }, 8000);
     });
 }
 
 export function getCity() {
-  if (localStorage.getItem("search-city") == 0) {
+  if (
+    localStorage.getItem("search-city") === null ||
+    localStorage.getItem("search-city") === ""
+  ) {
     // SEARCH_INPUT.value = "Search city or ZIP";
     currentLocation();
+    console.log("пошли в местную локацию");
   } else {
     SEARCH_INPUT.value = localStorage.getItem("search-city");
     mainCearch();
+    console.log("пошли по главному поиску");
   }
 }
 

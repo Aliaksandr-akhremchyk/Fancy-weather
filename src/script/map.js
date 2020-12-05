@@ -2,6 +2,10 @@ import { getWeather } from "./weather";
 import { getPlace } from "./coord";
 import { allData } from "./insertData";
 import { insertData } from "./insertData";
+import { START_OVERLAY } from "./leng";
+
+const START_MESSAGE = document.querySelector(".start-message");
+const START_CONFIRM_btn = document.querySelector(".start-confirm");
 
 export function currentLocation() {
   navigator.geolocation.getCurrentPosition(success, error, options);
@@ -46,9 +50,18 @@ function success(pos) {
 }
 
 function error(err) {
+  moveStatrMessage();
   console.warn(`ERROR(${err.code}): ${err.message}`);
 }
 
+function moveStatrMessage() {
+  START_MESSAGE.classList.toggle("move");
+}
+
+START_CONFIRM_btn.addEventListener("click", () => {
+  START_OVERLAY.style.display = "none";
+  moveStatrMessage();
+});
 /////////////////////
 // const b = document.querySelector("button");
 // b.addEventListener("click", () => {

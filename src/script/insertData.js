@@ -55,7 +55,7 @@ export function insertData() {
   LATITUDE.textContent = coordForm(allData.lat);
   getPlaceForLeng(allData.lng, allData.lat);
   translate();
-  // START_OVERLAY.style.display = "none";
+  START_OVERLAY.style.display = "none";
 }
 
 function coordForm(n) {

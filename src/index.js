@@ -2,7 +2,7 @@ import {
   getDegFormLocalStorage,
   getLengFormLocalStorage,
 } from "./script/header";
-import { getCity } from "./script/search";
+import { getCity, currentLocation } from "./script/search";
 import { showTime, showDay } from "./script/time";
 import { setMap } from "./script/map";
 
@@ -15,6 +15,7 @@ getDegFormLocalStorage();
 getLengFormLocalStorage();
 showDay();
 setMap();
+// currentLocation();
 getCity();
 
 export { time };
