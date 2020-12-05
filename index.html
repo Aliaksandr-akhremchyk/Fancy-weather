@@ -17,10 +17,11 @@
     />
   </head>
   <body class="background">
+    <div class="start-overlay"> <p>Loading...</p> </div>
     <div class="background__img"></div>
     <div class="overlay"></div>
-    <div class="wrapper">
-      <div class="header">
+    <div class="header">
+      <div class="header__wrapper">
         <div class="header__container">
           <div class="header__refreshBtn">
             <div class="inVector"></div>
@@ -33,10 +34,12 @@
         <div class="push"></div>
         <div class="header__container">
           <input type="text" class="search-input" placeholder="Search city or ZIP"></input>
-          <div class="search-btn">Search</div>
+          <div class="search-btn"> <span class="t-search">Search</span> </div>
         </div>
       </div>
-      <div class="city">Minsk</div>
+    </div>
+    <div class="wrapper">
+      <div class="city">Minsk? ,tkfhecm b emdmck</div>
       <div class="day-time">
         <span class="day"></span>
         <span class="time"></span>
@@ -50,9 +53,9 @@
             </div>
             <div class="weather__today_description">
               <p> <span class="weatherCode">overcast</span> </p>
-              <p>Feels like: <span class="tempFeels">7</span>° </p>
-              <p>Wind:  <span class="wind">2 </span> </p>
-              <p>Humidity: <span class="humidity">83%</span> </p>
+              <p> <span class="t-tempFeels">Feels like: </span> <span class="tempFeels">7</span>° </p>
+              <p> <span class="t-wind">Wind: </span>  <span class="wind">2 </span> <span class="d-wind"> m/s</span> </p>
+              <p> <span class="t-humidity">Humity: </span> <span class="humidity">83%</span> </p>
             </div>
           </div>
           <div class="weather__three-days">
@@ -82,18 +85,13 @@
         <div class="map">
           <div id="map" class="map__img"></div>
           <div class="map__coordinates">
-            <p>Широта: <span class="latitude"></span></p>
-            <p>Долгота: <span class="longitude"></span></p>
+            <p> <span class="t-latitude">Шиа: </span> <span class="latitude"></span></p>
+            <p> <span class="t-longitude">Дота: </span> <span class="longitude"></span></p>
           </div>
         </div>
       </div>
-
-      
-      <p ></p>
-      <p ></p>
-      <p ></p>
-      <p ></p>
     </div>
+    <div class="message move"> Что-то пошло не так... </div>
     <script src="./dist/bundle.js"></script>
   </body>
 </html>

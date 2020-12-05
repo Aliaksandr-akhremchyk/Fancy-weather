@@ -14,7 +14,7 @@ body {
   overflow-x: hidden;
 }
 .wrapper {
-  max-width: 1500px;
+  max-width: 1400px;
   margin: auto;
   padding: 0 40px;
 
@@ -29,5 +29,20 @@ body {
 
   @media screen and (max-width: $width-tablet) {
     flex-direction: column;
+  }
+}
+
+.start-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  background-color: black;
+  z-index: 3;
+  p {
+    display: inline-block;
+    margin-top: 50vh;
   }
 }
