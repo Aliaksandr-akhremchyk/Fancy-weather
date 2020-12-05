@@ -1,10 +1,12 @@
-import greet from "./script/modul1";
+import "./script/header";
+import { getCity } from "./script/search";
 import { showTime, showDay } from "./script/time";
 
 import "./index.scss";
-let a = 1;
 
-console.log("I'm the entry point");
-greet();
 showTime();
+let time = setInterval(showTime, 1000);
 showDay();
+// getCity();
+
+export { time };

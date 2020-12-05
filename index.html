@@ -10,45 +10,90 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./dist/style.css" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
   </head>
   <body class="background">
+    <div class="background__img"></div>
     <div class="overlay"></div>
-    <div class="header">
-      <div class="header__container">
-        <div class="header__refreshBtn">
-          <div class="inVector"></div>
+    <div class="wrapper">
+      <div class="header">
+        <div class="header__container">
+          <div class="header__refreshBtn">
+            <div class="inVector"></div>
+          </div>
+          <div class="leng-en btn-left btn-small">EN</div>
+          <div class="leng-ru btn-right btn-small passive">RU</div>
+          <div class="deg-f btn-left btn-small passive">°F</div>
+          <div class="deg-c btn-right btn-small ">°С</div>
         </div>
-        <div class="leng-en btn-left btn-small">EN</div>
-        <div class="leng-ru btn-right btn-small passive">RU</div>
-        <div class="deg-f btn-left btn-small">°F</div>
-        <div class="deg-c btn-right btn-small passive">°С</div>
-      </div>
-      <div class="push"></div>
-      <div class="header__container">
-        <div class="search-input">Search city or ZIP</div>
-        <div class="search-btn">Search</div>
-      </div>
-    </div>
-    <div class="sity">Minsk, Belarus</div>
-    <div class="day-time">
-      <span class="day"></span>
-      <span class="time"></span>
-    </div>
-    <div class="weather">
-      <div class="weather__today">10</div>
-      <div class="weather__three-days">
-        <div class="weather__three-days_day weather__three-days_day-first">
-          7
-        </div>
-        <div class="weather__three-days_day weather__three-days_day-second">
-          8
-        </div>
-        <div class="weather__three-days_day weather__three-days_day-sthird">
-          9
+        <div class="push"></div>
+        <div class="header__container">
+          <input type="text" class="search-input" placeholder="Search city or ZIP"></input>
+          <div class="search-btn">Search</div>
         </div>
       </div>
-    </div>
+      <div class="city">Minsk</div>
+      <div class="day-time">
+        <span class="day"></span>
+        <span class="time"></span>
+      </div>
+      <div class="container">
+        <div class="weather">
+          <div class="weather__today">
+            <div class="weather__today_temp">
+              <span class="temp">25</span>° 
+              <div class="icon-today icon"></div>
+            </div>
+            <div class="weather__today_description">
+              <p> <span class="weatherCode">overcast</span> </p>
+              <p>Feels like: <span class="tempFeels">7</span>° </p>
+              <p>Wind:  <span class="wind">2 </span> </p>
+              <p>Humidity: <span class="humidity">83%</span> </p>
+            </div>
+          </div>
+          <div class="weather__three-days">
+            <div class="weather__three-days_day weather__three-days_day-first">
+              <div class="day-title title-day-first">Tuesday</div>
+              <div class="weather__three-days_day-temp">
+                <span class="temp-day-first">7</span>°
+                <div class="icon-first icon icon-small"></div>
+              </div>
+            </div>
+            <div class="weather__three-days_day weather__three-days_day-second">
+              <div class="day-title title-day-second">Tuesday</div>
+              <div class="weather__three-days_day-temp">
+                <span class="temp-day-second">7</span>°
+                <div class="icon-second icon icon-small"></div>
+              </div>
+            </div>
+            <div class="weather__three-days_day weather__three-days_day-third">
+              <div class="day-title title-day-third">Tuesday</div>
+              <div class="weather__three-days_day-temp">
+                <span class="temp-day-third">7</span>°
+                <div class="icon-third icon icon-small"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="map">
+          <div id="map" class="map__img"></div>
+          <div class="map__coordinates">
+            <p>Широта: <span class="latitude"></span></p>
+            <p>Долгота: <span class="longitude"></span></p>
+          </div>
+        </div>
+      </div>
 
+      
+      <p ></p>
+      <p ></p>
+      <p ></p>
+      <p ></p>
+    </div>
     <script src="./dist/bundle.js"></script>
   </body>
 </html>
