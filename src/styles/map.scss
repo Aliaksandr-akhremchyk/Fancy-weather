@@ -6,14 +6,13 @@
   flex-direction: column;
   max-width: 600px;
   margin-left: 20px;
-  max-height: 467px;
+  max-height: 476px;
   margin-bottom: 10px;
 
   border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.3);
 
   @media screen and (max-width: $width-desktop) {
-    max-height: 400px;
+    max-height: 421px;
   }
   @media screen and (max-width: $width-tablet-big) {
     margin-left: 0px;
@@ -30,8 +29,13 @@
     }
   }
   &__coordinates {
-    font-size: 13px;
-    line-height: 3px;
+    font-size: 20px;
+    line-height: 20px;
+
+    @media screen and (max-width: $width-tablet) {
+      font-size: 13px;
+      line-height: 3px;
+    }
 
     @media screen and (max-width: $width-small-mobile) {
       font-size: 11px;

@@ -201,8 +201,13 @@
   border-radius: 5px;
   transition: 0.5s;
   transform: translateX(350px);
-  @media screen and (max-width: $width-mobile) {
+
+  @media screen and (max-width: $width-tablet) {
     top: 150px;
+  }
+
+  @media screen and (max-width: $width-mobile) {
+    top: 120px;
   }
 }
 

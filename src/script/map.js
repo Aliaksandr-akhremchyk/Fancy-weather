@@ -43,11 +43,15 @@ function success(pos) {
 
   getPlace(crd.longitude, crd.latitude)
     .then((s) => getWeather(crd.longitude, crd.latitude))
-    .then((s) => insertData());
+    .then((s) => {
+      insertData();
+      START_OVERLAY.style.display = "none";
+    });
 }
 
 function error(err) {
   moveStatrMessage();
+  insertData(1);
   console.warn(`ERROR(${err.code}): ${err.message}`);
 }
 

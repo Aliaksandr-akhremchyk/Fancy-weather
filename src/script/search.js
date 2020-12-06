@@ -65,4 +65,4 @@ SEARCH_INPUT.addEventListener("keypress", (e) => {
 });
 
 SEARCH_INPUT.addEventListener("focus", () => (SEARCH_INPUT.value = ""));
-MESSAGE.addEventListener("click", moveMessage);
+MESSAGE.addEventListener("click", () => MESSAGE.classList.remove("move"));

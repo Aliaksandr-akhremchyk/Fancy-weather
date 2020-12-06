@@ -28,15 +28,15 @@ export let allData = {
   temp: [0, 0, 0, 0],
   tempFeels: [0, 0, 0, 0],
   wind: [0, 0, 0, 0],
-  weatherCode: ["Clear", "Clear", "Clear", "Clear"],
+  weatherCode: ["clear", "clear", "clear", "clear"],
   humidity: [0, 0, 0, 0],
   place: ["Город, Республика", "City, Country"],
   offset: 0,
-  lng: 0,
-  lat: 0,
+  lng: 12.3456789,
+  lat: 12.3456789,
 };
 
-export function insertData() {
+export function insertData(e) {
   let lengInx = currentLeng === "ru" ? 0 : 1;
   clearInterval(time);
   showTime(allData.offset);
@@ -46,16 +46,16 @@ export function insertData() {
   setCity();
   setTemp();
   setIcons();
-  setWeatherDescription(allData.weatherCode[0]);
+  // setWeatherDescription(allData.weatherCode[0]);
 
   WIND.textContent = allData.wind[0].toFixed(1);
   HUMIDITY.textContent = `${Math.round(allData.humidity[0])} %`;
 
   LONGITUDE.textContent = coordForm(allData.lng);
   LATITUDE.textContent = coordForm(allData.lat);
-  getPlaceForLeng(allData.lng, allData.lat);
   translate();
-  START_OVERLAY.style.display = "none";
+  if (e) return;
+  getPlaceForLeng(allData.lng, allData.lat);
 }
 
 function coordForm(n) {
@@ -69,7 +69,6 @@ export function setTemp() {
     let temp = Math.round(
       currentDeg === "°f" ? cToF(allData.temp[i]) : allData.temp[i]
     );
-
     temps[i].textContent = `${temp > 0 ? "+" : ""}${temp}`;
   }
   let temp = Math.round(
