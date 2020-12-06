@@ -15,16 +15,22 @@ body {
   overflow-x: hidden;
 }
 .wrapper {
+  display: flex;
   max-width: 1400px;
+  height: 100vh;
   margin: auto;
   padding: 0 40px;
 
   @media screen and (max-width: $width-tablet) {
     flex-direction: column;
-    padding: 0 25px;
+    padding: 0 20px;
+  }
+  @media screen and (max-width: $width-small-mobile) {
+    padding: 0 15px;
   }
 }
 .container {
+  flex-grow: 1;
   display: flex;
   justify-content: space-between;
 

@@ -16,6 +16,11 @@
     font-size: 26px;
     line-height: 28px;
   }
+  @media screen and (max-width: $width-small-mobile) {
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 25px;
+  }
 }
 
 .day-time {
@@ -27,11 +32,21 @@
   @media screen and (max-width: $width-tablet) {
     // padding-left: 25px;
   }
+
   @media screen and (max-width: $width-mobile) {
     font-size: 15px;
     line-height: 20px;
   }
+
+  @media screen and (max-width: $width-small-mobile) {
+    font-weight: normal;
+  }
 }
+
 .time {
   margin-left: 15px;
+
+  @media screen and (max-width: $width-small-mobile) {
+    margin-left: 10px;
+  }
 }
