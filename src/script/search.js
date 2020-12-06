@@ -3,6 +3,7 @@ import { getWeather } from "./weather";
 import { getСoordinates } from "./coord";
 import { insertData } from "./insertData";
 import { MESSAGE } from "./leng";
+import { getLinkToImage } from "./header";
 
 const SEARCH_btn = document.querySelector(".search-btn");
 export const SEARCH_INPUT = document.querySelector(".search-input");
@@ -19,7 +20,10 @@ function mainCearch() {
       }); //setMap(...data);
       return getWeather(...data);
     })
-    .then((s) => insertData())
+    .then((s) => {
+      getLinkToImage();
+      insertData();
+    })
     .catch((e) => {
       console.log("не получилось ваще");
       moveMessage();

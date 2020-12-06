@@ -25,12 +25,12 @@ let temps = [TEMP_TODAY, TEMP_1, TEMP_2, TEMP_3];
 let icons = [ICON_TODAY, ICON_1, ICON_2, ICON_3];
 
 export let allData = {
-  temp: [],
-  tempFeels: [],
-  wind: [],
-  weatherCode: [],
-  humidity: [],
-  place: [],
+  temp: [0, 0, 0, 0],
+  tempFeels: [0, 0, 0, 0],
+  wind: [0, 0, 0, 0],
+  weatherCode: ["Clear", "Clear", "Clear", "Clear"],
+  humidity: [0, 0, 0, 0],
+  place: ["Город, Республика", "City, Country"],
   offset: 0,
   lng: 0,
   lat: 0,

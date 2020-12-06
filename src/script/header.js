@@ -3,7 +3,7 @@ import { showDay, currentLeng } from "./time";
 import { translate } from "./leng";
 
 const BACKGROUND_IMG = document.querySelector(".background__img");
-const REFRESH_btn = document.querySelector(".header__refreshBtn");
+const REFRESH_IMG_btn = document.querySelector(".header__refreshBtn");
 const VECTOR_REFRESH_btn = document.querySelector(".inVector");
 const LENG_EN_btn = document.querySelector(".leng-en");
 const LENG_RU_btn = document.querySelector(".leng-ru");
@@ -65,7 +65,7 @@ export function getLengFormLocalStorage() {
   }
 }
 
-REFRESH_btn.addEventListener("click", () => {
+REFRESH_IMG_btn.addEventListener("click", () => {
   VECTOR_REFRESH_btn.style.transform = `rotate(${rotare}deg)`;
   rotare += 180;
   getLinkToImage();
@@ -87,7 +87,7 @@ function loadImage(url) {
   };
 }
 
-function getLinkToImage() {
+export function getLinkToImage() {
   const url =
     "https://api.unsplash.com/photos/random?query=morning&client_id=e2077ad31a806c894c460aec8f81bc2af4d09c4f8104ae3177bb809faf0eac17";
   fetch(url)

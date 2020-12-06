@@ -7,10 +7,10 @@
     align-items: flex-end;
     margin-top: 70px;
 
-    @media screen and (max-width: $width-mobile) {
-      flex-direction: column;
-      align-items: flex-start;
-    }
+    // @media screen and (max-width: $width-mobile) {
+    //   flex-direction: column;
+    //   align-items: flex-start;
+    // }
 
     &_temp {
       position: relative;
@@ -19,18 +19,19 @@
       line-height: 235px;
 
       @media screen and (max-width: $width-mobile) {
-        font-size: 200px;
-        line-height: 180px;
+        font-size: 90px;
+        line-height: 85px;
       }
     }
     &_description {
       font-weight: bold;
       font-size: 22px;
-      line-height: 32px;
+      line-height: 20px;
 
       @media screen and (max-width: $width-mobile) {
-        font-size: 18px;
-        line-height: 28px;
+        margin-left: 6px;
+        font-size: 14px;
+        line-height: 17px;
       }
 
       p {
@@ -45,7 +46,7 @@
     margin-top: 40px;
 
     @media screen and (max-width: $width-mobile) {
-      margin-top: 20px;
+      margin-top: 3px;
     }
     &_day {
       // flex-grow: 1;
@@ -55,7 +56,8 @@
       margin-right: 15px;
 
       @media screen and (max-width: $width-mobile) {
-        font-size: 16px;
+        margin-right: 3px;
+        font-size: 13px;
         line-height: 24px;
       }
 
@@ -72,11 +74,13 @@
         line-height: 80px;
 
         @media screen and (max-width: $width-mobile) {
-          font-size: 50px;
-          line-height: 60px;
+          margin: 5px 30px 0px 0;
+          padding-left: 0px;
+          font-size: 40px;
+          line-height: 50px;
         }
         &:last-child {
-          margin-right: 45px;
+          margin-right: 26px;
         }
       }
     }
@@ -97,10 +101,14 @@
   background-image: url(../src/assets/icons/clear-night.svg);
   background-size: cover;
   background-position: center;
+  @media screen and (max-width: $width-tablet) {
+    top: -100px;
+    right: -124px;
+  }
 
   &-small {
-    top: -10px;
-    right: -45px;
+    top: -17px;
+    right: -37px;
     width: 50px;
     height: 50px;
   }

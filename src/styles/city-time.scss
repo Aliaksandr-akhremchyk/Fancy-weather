@@ -8,12 +8,13 @@
   // text-transform: uppercase;
 
   @media screen and (max-width: $width-tablet) {
-    padding-top: 158px;
+    padding-top: 110px;
   }
 
   @media screen and (max-width: $width-mobile) {
-    font-size: 34px;
-    line-height: 36px;
+    padding-top: 110px;
+    font-size: 26px;
+    line-height: 28px;
   }
 }
 
@@ -27,8 +28,8 @@
     // padding-left: 25px;
   }
   @media screen and (max-width: $width-mobile) {
-    font-size: 20px;
-    line-height: 25px;
+    font-size: 15px;
+    line-height: 20px;
   }
 }
 .time {
