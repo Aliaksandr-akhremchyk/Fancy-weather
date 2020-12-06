@@ -8,7 +8,9 @@
   // text-transform: uppercase;
 
   @media screen and (max-width: $width-tablet) {
-    padding-top: 110px;
+    padding-top: 120px;
+    font-size: 33px;
+    line-height: 44px;
   }
 
   @media screen and (max-width: $width-mobile) {

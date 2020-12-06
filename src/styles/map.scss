@@ -6,12 +6,25 @@
   flex-direction: column;
   max-width: 600px;
   margin-left: 20px;
+  max-height: 467px;
+  margin-bottom: 10px;
 
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  @media screen and (max-width: $width-desktop) {
+    max-height: 400px;
+  }
+  @media screen and (max-width: $width-tablet-big) {
+    margin-left: 0px;
+    max-height: 700px;
+    width: 100%;
+  }
   &__img {
     flex-grow: 1;
-    max-width: 600px;
     min-height: 200px;
     border-radius: 5px;
+
     @media screen and (max-width: $width-small-mobile) {
       min-height: 180px;
     }
@@ -24,8 +37,5 @@
       font-size: 11px;
       line-height: 2px;
     }
-  }
-  @media screen and (max-width: $width-tablet) {
-    margin-left: 0px;
   }
 }
