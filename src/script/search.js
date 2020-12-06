@@ -39,10 +39,11 @@ export function getCity() {
     console.log("пошли в местную локацию");
   } else {
     SEARCH_INPUT.value = localStorage.getItem("search-city");
-    mainCearch();
+    currentLocation();
     console.log("пошли по главному поиску");
   }
 }
+//mainCearch();
 
 export function setCity() {
   localStorage.setItem("search-city", SEARCH_INPUT.value);

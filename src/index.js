@@ -8,14 +8,15 @@ import { setMap } from "./script/map";
 
 import "./index.scss";
 
+setMap();
 showTime();
 let time = setInterval(showTime, 1000);
 
 getDegFormLocalStorage();
 getLengFormLocalStorage();
 showDay();
-setMap();
 // currentLocation();
 getCity();
+// console.log("Это главный файл");
 
 export { time };

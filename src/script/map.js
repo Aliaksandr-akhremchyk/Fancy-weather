@@ -31,14 +31,11 @@ var options = {
 };
 
 function success(pos) {
+  console.log("получили местные координаты");
   var crd = pos.coords;
   allData.lat = crd.latitude;
   allData.lng = crd.longitude;
 
-  console.log("Ваше текущее метоположение:");
-  console.log(`Широта: ${crd.latitude}`);
-  console.log(`Долгота: ${crd.longitude}`);
-  console.log(`Плюс-минус ${crd.accuracy} метров.`);
   map.flyTo({
     center: [crd.longitude, crd.latitude],
     essential: true, // this animation is considered essential with respect to prefers-reduced-motion

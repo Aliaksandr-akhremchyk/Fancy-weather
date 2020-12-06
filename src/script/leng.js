@@ -34,7 +34,7 @@ let translation = [
   ["Влажность: ", "Humidity: "],
   ["Широта: ", "Latitude: "],
   ["Долгота: ", "Longitude: "],
-  ["Что-то пошл/о не так...", "Something went wrong..."],
+  ["Что-то пошло не так...", "Something went wrong..."],
   ["Загрузка...", "Loading..."],
 ];
 
