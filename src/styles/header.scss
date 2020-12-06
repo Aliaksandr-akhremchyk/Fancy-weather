@@ -118,6 +118,7 @@
 }
 
 .search-input {
+  position: relative;
   display: flex;
   box-sizing: border-box;
   align-items: center;
@@ -138,6 +139,34 @@
   color: white;
   font-feature-settings: "cpsp" on;
   transition: 0.3s;
+
+  &_speech {
+    position: relative;
+    cursor: pointer;
+    z-index: 2;
+
+    &:hover {
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 7px;
+      right: 7px;
+      width: 20.3px;
+      height: 29px;
+      background-image: url("../src/assets/imeges/micr.png");
+      background-size: cover;
+    }
+
+    @media screen and (max-width: $width-mobile) {
+      &::after {
+        top: 4px;
+        width: 18.3px;
+        height: 26px;
+      }
+    }
+  }
 
   &:hover {
     background-color: $color_hover_btn;
@@ -161,6 +190,7 @@
 }
 
 .search-btn {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;

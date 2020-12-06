@@ -5,7 +5,7 @@ import {
 import { getCity, currentLocation } from "./script/search";
 import { showTime, showDay } from "./script/time";
 import { setMap } from "./script/map";
-// import { speech } from "./script/speechRecognition.js";
+import { speech } from "./script/speechRecognition.js";
 
 import "./index.scss";
 
@@ -19,4 +19,4 @@ showDay();
 getCity();
 
 export { time };
-// speech();
+speech();

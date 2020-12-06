@@ -10,7 +10,7 @@ export const SEARCH_INPUT = document.querySelector(".search-input");
 
 SEARCH_btn.addEventListener("click", mainCearch);
 
-function mainCearch() {
+export function mainCearch() {
   getСoordinates(SEARCH_INPUT.value)
     .then((data) => {
       console.log("сюда дошли");
