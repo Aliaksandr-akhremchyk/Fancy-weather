@@ -13,11 +13,10 @@ SEARCH_btn.addEventListener("click", mainCearch);
 export function mainCearch() {
   getСoordinates(SEARCH_INPUT.value)
     .then((data) => {
-      console.log("сюда дошли");
       map.flyTo({
         center: [...data],
         essential: true, // this animation is considered essential with respect to prefers-reduced-motion
-      }); //setMap(...data);
+      }); 
       return getWeather(...data);
     })
     .then((s) => {
@@ -25,7 +24,7 @@ export function mainCearch() {
       insertData();
     })
     .catch((e) => {
-      console.log("не получилось ваще");
+      console.log("Не получилось всё");
       moveMessage();
       setTimeout(() => {
         MESSAGE.classList.remove("move");
@@ -38,16 +37,12 @@ export function getCity() {
     localStorage.getItem("search-city") === null ||
     localStorage.getItem("search-city") === ""
   ) {
-    // SEARCH_INPUT.value = "Search city or ZIP";
     currentLocation();
-    console.log("пошли в местную локацию");
   } else {
     SEARCH_INPUT.value = localStorage.getItem("search-city");
     currentLocation();
-    console.log("пошли по главному поиску");
   }
 }
-//mainCearch();
 
 export function setCity() {
   localStorage.setItem("search-city", SEARCH_INPUT.value);

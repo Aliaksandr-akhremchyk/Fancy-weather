@@ -9,8 +9,9 @@ const LENG_EN_btn = document.querySelector(".leng-en");
 const LENG_RU_btn = document.querySelector(".leng-ru");
 const DEG_F_btn = document.querySelector(".deg-f");
 const DEG_C_btn = document.querySelector(".deg-c");
+const HEADER = document.querySelector(".header");
 
-let rotare = 180;
+let rotate = 180;
 let isBackgroundImgActive = false;
 
 export let currentDeg = "°с";
@@ -57,6 +58,7 @@ export function getDegFormLocalStorage() {
     DEG_C_btn.classList.toggle("passive");
   }
 }
+
 export function getLengFormLocalStorage() {
   if (localStorage.getItem("weather-leng") === "ru") {
     currentLeng = "ru";
@@ -66,8 +68,8 @@ export function getLengFormLocalStorage() {
 }
 
 REFRESH_IMG_btn.addEventListener("click", () => {
-  VECTOR_REFRESH_btn.style.transform = `rotate(${rotare}deg)`;
-  rotare += 180;
+  VECTOR_REFRESH_btn.style.transform = `rotate(${rotate}deg)`;
+  rotate += 180;
   getLinkToImage();
 });
 
@@ -99,4 +101,12 @@ function changeOpacity() {
   if (!isBackgroundImgActive) {
     BACKGROUND_IMG.style.opacity = "1";
   } else BACKGROUND_IMG.style.opacity = "0";
+}
+
+document.addEventListener("scroll", onScroll);
+function onScroll() {
+  const POS = window.scrollY;
+  if (POS === 0) {
+    HEADER.classList.remove("darck-header");
+  } else HEADER.classList.add("darck-header");
 }

@@ -31,8 +31,7 @@ var options = {
 };
 
 function success(pos) {
-  console.log("получили местные координаты");
-  var crd = pos.coords;
+  let crd = pos.coords;
   allData.lat = crd.latitude;
   allData.lng = crd.longitude;
 
@@ -63,14 +62,4 @@ START_CONFIRM_btn.addEventListener("click", () => {
   START_OVERLAY.style.display = "none";
   moveStatrMessage();
 });
-/////////////////////
-// const b = document.querySelector("button");
-// b.addEventListener("click", () => {
-//   map.flyTo({
-//     center: [
-//       -74.5 + (Math.random() - 0.5) * 10,
-//       40 + (Math.random() - 0.5) * 10,
-//     ],
-//     essential: true, // this animation is considered essential with respect to prefers-reduced-motion
-//   });
-// });
+

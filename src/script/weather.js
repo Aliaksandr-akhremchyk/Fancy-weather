@@ -22,10 +22,7 @@ export function getWeather(lng, lat) {
 
         allData.weatherCode[i] = data[i].weather_code.value;
       }
-      // console.log(data);
       return "ok";
     })
     .catch((e) => console.log("не получилось с погодой"));
 }
-
-// getWeather();

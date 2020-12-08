@@ -23,7 +23,6 @@ let titles = [
   T_LATITUDE,
   T_LONGIRUDE,
   MESSAGE,
-  // START_OVERLAY,
 ];
 
 let translation = [
@@ -35,7 +34,6 @@ let translation = [
   ["Широта: ", "Latitude: "],
   ["Долгота: ", "Longitude: "],
   ["Что-то пошло не так...", "Something went wrong..."],
-  // ["Загрузка...", "Loading..."],
 ];
 
 let codeWeather = [
@@ -105,11 +103,9 @@ export function translate() {
 
 export function setWeatherDescription(code) {
   let langIndex = currentLeng === "ru" ? 0 : 1;
-  console.log("Вошли во встаку описаниея погоды", code);
   for (let i = 0; i < codeWeather.length; ++i) {
     if (code == codeWeather[i]) {
       WEATHER_CODE.textContent = weatherDescription[i][langIndex];
-      console.log("Вставили описаниея погоды");
       return;
     }
   }

@@ -7,7 +7,6 @@ export function getСoordinates(place) {
   return fetch(url)
     .then((res) => res.json())
     .then((data) => {
-      // console.log(data);
       allData.place[lengInx] = `${
         data.results[0].components.city ||
         data.results[0].components.town ||
@@ -35,7 +34,6 @@ export function getPlace(lng, lat) {
         data.results[0].components["ISO_3166-1_alpha-3"]
       }, ${data.results[0].components.country}`;
       allData.offset = data.results[0].annotations.timezone.offset_sec;
-      // console.log(data);
       return "ok";
     })
     .catch((e) => console.log("не получилось с Местом"));
@@ -54,7 +52,6 @@ export function getPlaceForLeng(lng, lat) {
         data.results[0].components.village ||
         data.results[0].components["ISO_3166-1_alpha-3"]
       }, ${data.results[0].components.country}`;
-      // console.log(data);
       return "ok";
     })
     .catch((e) => console.log("не получилось с Местом"));

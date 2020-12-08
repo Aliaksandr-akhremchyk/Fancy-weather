@@ -1,5 +1,5 @@
 import { setIcons } from "./insertData";
-// import { currentLeng } from "./header";
+import { allData } from "./insertData";
 
 const TIME = document.querySelector(".time");
 const DAY = document.querySelector(".day");
@@ -14,12 +14,17 @@ export let currentLeng = "en";
 
 // let time = setInterval(showTime, 1000);
 export function showTime(offset) {
-  incomeOffset = offset;
   let today = new Date();
   timeOffset = today.getTimezoneOffset() * 60;
-  today.setSeconds(
-    today.getSeconds() + (offset || offset === 0 ? offset + timeOffset : 0)
-  );
+
+  if (offset === undefined) {
+    allData.offset = 0 - timeOffset;
+    incomeOffset = timeOffset;
+  }
+
+  incomeOffset = offset || 0;
+  today.setSeconds(today.getSeconds() + incomeOffset + timeOffset);
+
   let hour = today.getHours();
   let min = today.getMinutes();
   let sec = today.getSeconds();
@@ -37,9 +42,8 @@ function addZero(n) {
 
 export function showDay() {
   let today = new Date();
-  today.setSeconds(
-    today.getSeconds() + (incomeOffset ? incomeOffset + timeOffset : 0)
-  );
+  today.setSeconds(today.getSeconds() + incomeOffset + timeOffset);
+
   let langIndex = currentLeng === "ru" ? 0 : 1;
 
   let daysW = [
@@ -72,6 +76,7 @@ export function showDay() {
       ["Сб", "Sat"],
     ],
   ];
+
   let months = [
     ["Января", "January"],
     ["Февраля", "February"],
@@ -86,6 +91,7 @@ export function showDay() {
     ["Ноября", "November"],
     ["Декабря", "December"],
   ];
+  
   let dayW = today.getDay();
   let dayDate = today.getDate();
   let dayMonth = today.getMonth();

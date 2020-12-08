@@ -1,8 +1,8 @@
-import { time } from "../index";
-import { showTime, showDay, currentLeng, isNight } from "./time";
+import { resetTime } from "../index";
+import { isNight } from "./time";
 import { setCity } from "./search";
 import { currentDeg } from "./header";
-import { setWeatherDescription, translate, START_OVERLAY } from "./leng";
+import { translate } from "./leng";
 import { getPlaceForLeng } from "./coord";
 
 const TEMP_TODAY = document.querySelector(".temp");
@@ -37,16 +37,10 @@ export let allData = {
 };
 
 export function insertData(e) {
-  let lengInx = currentLeng === "ru" ? 0 : 1;
-  clearInterval(time);
-  showTime(allData.offset);
-  time = setInterval(showTime, 1000, allData.offset);
-  showDay();
-
+  resetTime(allData.offset)
   setCity();
   setTemp();
   setIcons();
-  // setWeatherDescription(allData.weatherCode[0]);
 
   WIND.textContent = allData.wind[0].toFixed(1);
   HUMIDITY.textContent = `${Math.round(allData.humidity[0])} %`;
@@ -87,6 +81,6 @@ export function setIcons() {
   for (let i = 0; i < icons.length; ++i) {
     icons[
       i
-    ].style.backgroundImage = `url(./src/assets/icons/${allData.weatherCode[i]}${sufix}.svg)`;
+    ].style.backgroundImage = `url(../src/assets/icons/${allData.weatherCode[i]}${sufix}.svg)`;
   }
 }

@@ -2,9 +2,10 @@ import { SEARCH_INPUT, mainCearch } from "./search";
 import { currentLeng } from "./time";
 
 const BTN_SPEECH = document.querySelector(".search-input_speech");
+
 const SpeechRecognition =
   window.SpeechRecognition || window.webkitSpeechRecognition;
-var recognition;
+let recognition;
 
 export function speech() {
   recognition = new SpeechRecognition();
@@ -14,6 +15,7 @@ export function speech() {
     console.log(recognition.lang);
     recognition.start();
     console.log("Ready to receive a color command.");
+    changeColor();
   });
 
   recognition.onresult = function (event) {
@@ -23,8 +25,13 @@ export function speech() {
   };
 
   recognition.onerror = function (event) {
-    console.log(event.error);
+    console.log("Ошибка в голосовом наборе");
   };
 }
 
-// ;
+function changeColor() {
+  BTN_SPEECH.style.fill = "orange";
+  setTimeout(() => {
+    BTN_SPEECH.style.fill = "white";
+  }, 3000);
+}
