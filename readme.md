@@ -1,1 +1,1 @@
-# [Fancy-weather](https://aliaksandr-akhremchyk.github.io/Fancy-weather/)
+# [Fancy-weather](https://aliaksandr-akhremchyk.github.io/Fancy-weather/dist/)
